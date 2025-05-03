@@ -29,7 +29,31 @@ Our Random Forest classifier analyzes both structured lab results and unstructur
 
 The Prophet-based forecasting system models six critical blood biomarkers, generating 30-day predictions with confidence intervals. It automatically detects anomalies (values outside the 95% prediction interval) and classifies trends as increasing, decreasing, or stable. Visualizations include reference ranges and highlight concerning patterns.
 
+To map some of the objetives:
+
+1. **Centralized Medical Record Repository**
+   - Upload and organize PDFs, images, and text reports
+   - Automatic data extraction from medical documents
+
+2. **Time-Series Trend Analysis**
+   - Facebook Prophet models for forecasting
+   - Anomaly detection in lab values
+   - Interactive visualization
+
+3. **Clinical Report Interpretation**
+   - Medical jargon simplification
+   - Diagnostic suggestions
+   - Treatment recommendations
+
+4. **Privacy-Preserving Design**
+   - ONU-compliant inclusive fields
+   - AES-256 encrypted storage
+   - Local processing where possible
+
 ## Model Training Documentation
+
+
+ pip install -r  requirements.txt before the training.
 
 ### Time Series Trend Model (`model_TimeSeriesTrend.py`)
 
@@ -46,7 +70,6 @@ This module processes MIMIC-III laboratory data to train forecasting models for 
 - Numeric values in standard units
 
 **Output Format**:
-```json
 {
   "forecast": [
     {"date": "2023-01-01", "predicted_value": 14.2, "lower_bound": 13.8, "upper_bound": 14.6},
@@ -133,13 +156,21 @@ The system maintains full audit trails of all data processing steps while keepin
 
 Getting Started
 Install dependencies from requirements files
+ pip install -r backend/requirements.txt
+ pip install -r frontend/requirements.txt
+
 
 Train models using the provided scripts
 
-Launch backend API with uvicorn main:app --reload
+Launch backend API with cd backend
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
-Start frontend with streamlit run main.py
+Start frontend with cd frontend
+streamlit run main.py
 
 Access the interface at http://localhost:8501
 
 Sample test files are available in the /test_files/ directory to demonstrate system capabilities. The application has been validated against both MIMIC-III data and synthetic medical records for comprehensive testing.
+
+Datasets usados: https://www.kaggle.com/datasets/imtkaggleteam/synthetic-medical-dataset
+https://www.kaggle.com/datasets/asjad99/mimiciii
