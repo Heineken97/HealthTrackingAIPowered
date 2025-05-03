@@ -159,7 +159,7 @@ class ClinicalInterpreter:
                 features = {
                     'symptoms': self._extract_symptoms(patient_id),
                     'labs': self._extract_labs(patient_id),
-                    'age': np.random.randint(18, 90),  # Placeholder - should use real data
+                    'age': np.random.randint(18, 90), 
                     'gender': np.random.choice(['M', 'F'])  # Placeholder
                 }
                 
@@ -251,7 +251,7 @@ class ClinicalInterpreter:
         # Demographic features
         demo_features = np.array([
             [x['age'] / 100.0,  # Normalized age
-             1 if x['gender'] == 'M' else 0]  # Gender binary
+             1 if x['gender'] == 'M' else 0]
             for x in X
         ])
         

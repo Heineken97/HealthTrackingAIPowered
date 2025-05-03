@@ -1,0 +1,14 @@
+fastapi==0.95.2
+uvicorn==0.22.0
+python-multipart==0.0.6
+PyPDF2
+pytesseract==0.3.10
+pillow==10.0.0
+cryptography==41.0.0
+pandas==2.0.3
+numpy==1.24.3
+prophet==1.1.4
+scikit-learn==1.3.0
+joblib==1.3.2
+python-dotenv==1.0.0
+plotly==5.15.0

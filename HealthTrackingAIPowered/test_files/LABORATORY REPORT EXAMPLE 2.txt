@@ -1,0 +1,17 @@
+LABORATORY REPORT
+Patient: John Doe
+ID: P-123456
+Date: 2023-11-15
+
+HEMATOLOGY
+Hemoglobin: 12.9 g/dL (Normal: 13.5-17.5)
+WBC: 9.1 x10³/μL (Normal: 4.5-11.0)
+Glucose: 95 mg/dL (Normal: 70-100)
+
+CHEMISTRY
+Creatinine 1.2 mg/dL (Normal: 0.7-1.3)
+Sodium: 146 mmol/L (Normal: 135-145) 
+Potassium: 3.7 mmol/L (Normal: 3.5-5.1)
+
+NOTES:
+Patient experiences occasional dizziness and dry skin. Blood pressure: 118/78 mmHg. Recommended: Hydration and further evaluation for mild anemia.
